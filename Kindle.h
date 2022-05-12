@@ -18,6 +18,8 @@ private:
 
 	// did user read the book? 
 	bool userReadTheBook(const User& currentUser, int bookIndex) const;
+
+	// does user exist?
 	bool existUser(const string& userName) const;
 
 	// Functions used by user
