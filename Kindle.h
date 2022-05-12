@@ -18,6 +18,7 @@ private:
 
 	// did user read the book? 
 	bool userReadTheBook(const User& currentUser, int bookIndex) const;
+	bool existUser(const string& userName) const;
 
 	// Functions used by user
 	void readBookDialog(User& reader);

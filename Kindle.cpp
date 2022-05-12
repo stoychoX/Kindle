@@ -140,6 +140,13 @@ bool Kindle::userReadTheBook(const User& currentUser, int bookIndex) const {
 	return false;
 }
 
+bool Kindle::existUser(const string& userName) const {
+	for (size_t i = 0; i < users.getSize(); i++)
+		if (userName == users[i].name)
+			return true;
+	return false;
+}
+
 void Kindle::readBookDialog(User& reader) {
 	std::cout << "Which book would you like to read: ";
 	string bookName;
@@ -300,6 +307,11 @@ void Kindle::displaySignupDialog() {
 	std::cin.ignore();
 
 	name.getLine(std::cin);
+
+	if (existUser(name)) {
+		std::cout << "User with that name already exist!" << std::endl;	
+		return;
+	}
 
 	std::cout << "Enter password: ";
 	string password;
