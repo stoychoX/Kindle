@@ -211,7 +211,6 @@ void Kindle::commentOnBookDialog(const User& commenter) {
 	}
 	else {
 		std::cout << "You havent read the book" << std::endl;
-		return;
 	}
 }
 
